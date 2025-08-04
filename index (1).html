@@ -3,40 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Slideshow</title>
+  <title>Image Slideshow</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     body {
       margin: 0;
-      background: #111;
+      background-color: #f5f5f5;
       font-family: sans-serif;
-    }
-
-    .swiper {
-      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
     }
-
+    .swiper {
+      width: 90%;
+      height: 90vh;
+    }
     .swiper-slide {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #000;
+      background: #fff;
     }
-
     .swiper-slide img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: white;
-    }
-
-    .swiper-pagination-bullet {
-      background: white;
     }
   </style>
 </head>
@@ -44,7 +36,9 @@
 
   <div class="swiper">
     <div class="swiper-wrapper">
-      <!-- 30 slides -->
+      <!-- 30 Slides -->
+      <!-- Each image must match exactly: 01.jpg, 02.jpg ... 30.jpg -->
+      <!-- You can add or remove slides by copying or deleting lines -->
       <div class="swiper-slide"><img src="01.jpg" alt="01"></div>
       <div class="swiper-slide"><img src="02.jpg" alt="02"></div>
       <div class="swiper-slide"><img src="03.jpg" alt="03"></div>
@@ -77,9 +71,11 @@
       <div class="swiper-slide"><img src="30.jpg" alt="30"></div>
     </div>
 
-    <!-- Arrows and pagination -->
-    <div class="swiper-button-next"></div>
+    <!-- Arrows -->
     <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Pagination Dots -->
     <div class="swiper-pagination"></div>
   </div>
 
